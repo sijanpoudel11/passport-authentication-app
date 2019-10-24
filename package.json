@@ -1,0 +1,32 @@
+{
+  "name": "passport-authentication-app",
+  "version": "1.0.0",
+  "description": "fully functional login and registration system using passport js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sijanpoudel11/passport-authentication-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sijanpoudel11/passport-authentication-app/issues"
+  },
+  "homepage": "https://github.com/sijanpoudel11/passport-authentication-app#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.7.6",
+    "nodemon": "^1.19.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}
