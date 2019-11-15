@@ -3,14 +3,14 @@ let mongoose = require('mongoose');
 var User = require('./models/model');
 var passport = require('passport');
 
-var entureauthenticated = require('./auth');
+ //var entureauthenticated = require('./auth');
 mongoose.connect('mongodb://localhost/passport', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
     console.log('database connection established');
-}).catch(() => {
-    console.log(error);
+}).catch((err) => {
+    console.log(err);
 
 
 })
@@ -23,7 +23,7 @@ router.get('/register', (req, res) => {
     res.render('register');
 });
 
-router.get('/login', (req, res) => {
+router.get('/login',redirectdashboard, (req, res) => {
     res.render('login');
 });
 
@@ -85,5 +85,25 @@ router.post('/login', function (req, res, next) {
     })(req, res, next);
 });
 
+
+
+
+function entureauthenticated (req,res,next){
+    if(req.isAuthenticated()){
+        console.log('user authenticated');
+        return next();
+    }
+    res.redirect('/login');
+    console.log('not authenticated');
+}
+function redirectdashboard (req,res,next){
+    if(req.isAuthenticated()){
+        console.log('user authenticated');
+      res.redirect('/dashboard');
+    }
+    
+console.log('user not authenticated');
+   return next();
+}
 
 module.exports = router;
