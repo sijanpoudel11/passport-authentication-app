@@ -7,9 +7,26 @@
     <title>dashboard</title>
 </head>
 <body>
-    <h4>welcome to the dashboard <%= name%></h4>
+    <h4>welcome to the dashboard <%= user.name%></h4>
 
-    <a href="/logout">logout <%= name%></a>
+    profile information :- <br>
+    name : <%= user.name %> <hr>
+    age : <%= user.age %> <hr>
+    email : <%= user.email %> <hr>
+    password : <%= user.password %> <br>
+      <a href="/update/<%= user._id %>">edit your profile</a> 
+      <a href="/delete/<%= user._id %>" onclick="popup()"> delete your profile </a>
+      <a href="/changepassword/<%= user._id %>"> change your password</a>
+    <a href="/logout">logout <%= user.name%></a>
+
+    
+    <script>
+      function popup() {
+         
+        alert("I am an alert box!");
+      }
+
+      </script>
     
 </body>
 </html>

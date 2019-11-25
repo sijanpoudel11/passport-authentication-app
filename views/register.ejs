@@ -3,22 +3,24 @@
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="ie=edge" http-equiv="X-UA-Compatible">
-        <title>regiser page</title>
+        <title>Register page</title>
     </head>
     <body>
         <h5>YOU ARE IN THE REGISTER PAGE</h5>
         <form action="/register" method="POST">
+
+    
             Name :
-            <input name="name" required type="text">
+            <input name="name" required type="text" required >
             <br>
             Age :
-            <input name="age" name="age" required type="number"><br>
+            <input name="age"  required type="number" required ><br>
                     
             Email :                             
-            <input name="email" required type="email"><br>
-            Password :
-            <input name="password" required type="password">
-            <button type="submit">Submit</button>
+            <input name="email" required type="email" required ><br>
+           password :
+           <input type="password" name="password" required><br>
+            <button type="submit">Register</button>
 
 
         </form>

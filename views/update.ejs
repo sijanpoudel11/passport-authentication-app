@@ -1,0 +1,38 @@
+<!DOCTYPE html>  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="ie=edge" http-equiv="X-UA-Compatible">
+        <title> update page</title>
+    </head>
+    <body>
+        <h5>YOU ARE IN THE UPDATE PAGE</h5>
+        <form action="/update/<%= user._id %>" method="POST">
+
+          
+             <input type="text" required value="<%=  user._id%>" hidden   >
+               
+            Name :
+            <input name="name" required type="text" 
+                value="<%=user.name %>"
+             >
+            <br>
+            Age :
+            <input name="age"  required type="number"
+                value="<%=user.age %>"
+            ><br>
+                    
+            Email :                             
+            <input name="email" required type="email" 
+                value="<%=user.email %>"
+            >
+           
+            <input type="password" name="password" required 
+            value="<%= user.password%>" hidden><br>
+           
+            <button type="submit">Update</button>
+
+
+        </form>
+    </body>
+</html>
